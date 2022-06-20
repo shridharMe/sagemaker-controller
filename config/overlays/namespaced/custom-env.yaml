@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ack-sagemaker-controller
+  namespace: ack-system
+  labels:
+    control-plane: controller
+spec:
+  template:
+    spec:
+      containers:
+        - name: controller
+          env:
+            - name: AWS_REGION
+              value: us-east-2
