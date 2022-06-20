@@ -1,5 +1,7 @@
 resources:
 - ../../default
+patchesStrategicMerge:
+- custom-env.yaml
 patches:
 - path: role.json
   target:
